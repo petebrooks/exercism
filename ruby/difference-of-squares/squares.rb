@@ -9,8 +9,7 @@ class Squares
   end
 
   def sum_of_squares(n = @n)
-    return n if n <= 1
-    n**2 + sum_of_squares(n-1)
+    squares.inject(:+)
   end
 
   def difference
@@ -19,9 +18,12 @@ class Squares
 
   private
 
-  def sums(n = @n)
-    return n if n <= 1
-    n + sums(n-1)
+  def sums
+    (1..@n).inject(:+)
+  end
+
+  def squares
+    (1..@n).map { |x| x**2 }
   end
 
 end
