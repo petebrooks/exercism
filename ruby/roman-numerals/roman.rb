@@ -18,7 +18,7 @@ class Integer
     n = self
     roman_numeral = ''
     ROMAN_VALUES.each do |arabic, roman|
-      (n/arabic).times { roman_numeral << roman }
+      roman_numeral << roman * (n/arabic)
       n = n % arabic
     end
     roman_numeral
