@@ -1,1 +1,1 @@
-coding challenges from (exercism.io)[http://exercism.io]
+coding challenges from [exercism.io](http://exercism.io)
