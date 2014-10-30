@@ -15,6 +15,18 @@ class TestPrimes < MiniTest::Unit::TestCase
     assert_equal 13, Prime.nth(6)
   end
 
+  def test_100th
+    assert_equal 541, Prime.nth(100)
+  end
+
+  def test_1000th
+    assert_equal 7919, Prime.nth(1000)
+  end
+
+  def test_1000th
+    assert_equal 104729, Prime.nth(10000)
+  end
+
   def test_big_prime
     start_time = Time.now
     assert_equal 104743, Prime.nth(10001)

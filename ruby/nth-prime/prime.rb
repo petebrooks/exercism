@@ -13,10 +13,10 @@ module Prime
   def self.nth(n)
     raise ArgumentError, "Argument must be greater than 0" unless n > 0
     return @@primes[n] if @@primes[n]
-    until @@primes.length == n
+    until @@primes[n]
       next_prime
     end
-    return @@primes[n]
+    @@primes[n]
   end
 
   private
