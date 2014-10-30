@@ -1,6 +1,8 @@
 def is_prime?(n)
-  factors = (1..n/2).select{|x| n%x == 0}
-  factors == [1]
+  factors = (2..n/2).each do |x|
+    return false if n%x == 0
+  end
+  true
 end
 
 module Prime

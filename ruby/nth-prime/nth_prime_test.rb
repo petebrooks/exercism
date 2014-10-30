@@ -16,7 +16,9 @@ class TestPrimes < MiniTest::Unit::TestCase
   end
 
   def test_big_prime
+    start_time = Time.now
     assert_equal 104743, Prime.nth(10001)
+    puts Time.now - start_time
   end
 
   def test_weird_case
