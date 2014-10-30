@@ -8,6 +8,7 @@ end
 module Prime
 
   @@primes = {1 => 2}
+  @@greatest_value = 2
 
   def self.nth(n)
     raise ArgumentError, "Argument must be greater than 0" unless n > 0
@@ -21,11 +22,12 @@ module Prime
   private
 
   def self.next_prime
-    x = @@primes.values.last + 1
+    x = @@greatest_value + 1
     until is_prime?(x)
       x += 1
     end
     @@primes[@@primes.length + 1] = x
+    @@greatest_value = x
   end
 
 end
