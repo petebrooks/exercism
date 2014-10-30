@@ -1,5 +1,5 @@
 def is_prime?(n)
-  factors = (2..n/2).each do |x|
+  (2..Math.sqrt(n)).each do |x|
     return false if n%x == 0
   end
   true
