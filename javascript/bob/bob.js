@@ -6,9 +6,20 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-//
-// YOUR CODE GOES HERE
-//
+  if ( isShouting(input) ) { return ('Whoa, chill out!'); }
+  if ( isQuestion(input) ) { return ('Sure.'); }
+  if ( isSilent(input) ) { return ('Fine. Be that way!'); }
+  return ('Whatever.');
 };
+
+function isShouting(str) {
+  return (str === str.toUpperCase() && /[A-z]/.test(str));
+}
+function isQuestion(str) {
+  return (str.slice(-1) === '?');
+}
+function isSilent(str) {
+  return (/^\s*$/.test(str));
+}
 
 module.exports = Bob;
