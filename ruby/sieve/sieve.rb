@@ -8,11 +8,6 @@ class Sieve
     numbers.each do |n|
       numbers.delete_if { |x| x>n && x%n == 0 }
     end
-    numbers
-  end
-
-  private
-  def remove_multiples_of(n)
   end
 
 end
