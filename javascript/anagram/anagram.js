@@ -24,9 +24,6 @@ Anagram.prototype.matches = function() {
       letters_count = this.letters_count,
       length = Object.keys(letters_count).length;
 
-  // console.log("args: " + arguments + " t_m: " + test_matches);
-  // console.log(typeof test_matches === 'string');
-
   if ( arguments.length > 1 ) {
     test_matches = [];
     for ( var i in arguments) {
@@ -49,17 +46,11 @@ Anagram.prototype.matches = function() {
     } else {
       test.push( false );
     }
-    // console.log(m + ': ' + test + " " + test.indexOf(false) );
-    // console.log(test.indexOf(false) < 0 );
+
     if ( test.indexOf(false) < 0 ) { matches_array.push(m) };
   });
 
   return( matches_array );
 };
-
-// var subject = new Anagram("ant");
-// var matches = subject.matches('tan', 'stand', 'at');
-
-// console.log(matches);
 
 module.exports = anagram;
