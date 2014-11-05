@@ -16,7 +16,7 @@ module Complement
   private
 
   def self.transcribe(strand, complements_hash)
-    trans = strand.split('').map { |nuc| complements_hash[nuc] }
+    trans = strand.chars.map { |nuc| complements_hash[nuc] }
     trans.join
   end
 end

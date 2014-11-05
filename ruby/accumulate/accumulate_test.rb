@@ -8,7 +8,10 @@ class ArrayTest < MiniTest::Unit::TestCase
   end
 
   def test_accumulate_squares
+<<<<<<< HEAD
     skip
+=======
+>>>>>>> 52a3319b2592975ff8964bd30d04ce60edcfe568
     result = [1, 2, 3].accumulate { |number|
       number * number
     }
@@ -16,7 +19,10 @@ class ArrayTest < MiniTest::Unit::TestCase
   end
 
   def test_accumulate_upcases
+<<<<<<< HEAD
     skip
+=======
+>>>>>>> 52a3319b2592975ff8964bd30d04ce60edcfe568
     result = %w(hello world).accumulate { |word|
       word.upcase
     }
@@ -24,7 +30,10 @@ class ArrayTest < MiniTest::Unit::TestCase
   end
 
   def test_accumulate_reversed_strings
+<<<<<<< HEAD
     skip
+=======
+>>>>>>> 52a3319b2592975ff8964bd30d04ce60edcfe568
     result = %w(the quick brown fox etc).accumulate { |word|
       word.reverse
     }
@@ -32,7 +41,10 @@ class ArrayTest < MiniTest::Unit::TestCase
   end
 
   def test_accumulate_recursively
+<<<<<<< HEAD
     skip
+=======
+>>>>>>> 52a3319b2592975ff8964bd30d04ce60edcfe568
     result = %w(a b c).accumulate { |char|
       %w(1 2 3).accumulate { |digit|
         "#{char}#{digit}"
