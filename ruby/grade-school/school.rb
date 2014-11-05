@@ -9,6 +9,8 @@ class School
       hash[grade] = @students[grade].sort
     end
     hash
+
+    # @students.keys.sort.inject({}) { |hash, grade| hash[grade] = @students[grade].sort }
   end
 
   def add(name, grade)
