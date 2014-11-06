@@ -6,7 +6,7 @@ class School
   def to_hash
     hash = {}
     @students.keys.sort.each do |grade|
-      hash[grade] = @students[grade].sort
+      hash[grade] = @students[grade]
     end
     hash
 
