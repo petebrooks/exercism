@@ -15,9 +15,19 @@ class SpaceAge
   end
 
   def method_missing(method, *args)
-    super unless method[0..2] == 'on_'
+    super unless planet_method?(method)
     planet = method[3..-1].to_sym
     on_planet(planet)
+  end
+
+  def respond_to_missing?(method, include_private=false)
+    planet_method?(method) || super
+  end
+
+  def planet_method?(method)
+    contains_on = method[0..2] == 'on_'
+    contains_planet = @@planet_years.keys.include?(method[3..-1].to_sym)
+    contains_on && contains_planet
   end
 
   def on_planet(planet)
